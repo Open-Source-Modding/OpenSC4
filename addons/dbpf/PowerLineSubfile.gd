@@ -11,7 +11,7 @@ extends DBPFSubfile
 #                                         holding its Exemplar TGI (hence its
 #                                         S3D model) and world position.
 #
-# Neither type is listed in dev_notes/save_file_analysis 4.4; both are absent
+# Neither type is listed in sc4-savegame-format-analysis.md 4.4; both are absent
 # from Big City Tutorial but present in six of the other shipped saves.
 #
 # The two are joined by memory address: a span names its two poles, and a pole

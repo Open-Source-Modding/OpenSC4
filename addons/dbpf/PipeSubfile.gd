@@ -3,7 +3,7 @@ extends DBPFSubfile
 # Parses SC4's pipe subfile (type 0x49C05B9F, cSC4PipeOccupant) from a city
 # save: one record per water-pipe tile.
 #
-# NOTE ON THE TYPE ID: dev_notes/save_file_analysis 4.4 labels 0x49C05B9F the
+# NOTE ON THE TYPE ID: sc4-savegame-format-analysis.md 4.4 labels 0x49C05B9F the
 # "prebuilt network subfile". That is wrong -- 0x49C05B9F is cSC4PipeOccupant,
 # and the real prebuilt network is 0x49C1A034 (which appears in none of the
 # shipped saves). Confirmed by record shape: 700-byte records whose trailing

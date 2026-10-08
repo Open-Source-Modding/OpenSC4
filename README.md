@@ -6,6 +6,7 @@ Godot clone of SimCity4
 1. Acquire Godot
 2. Acquire and install Simcity 4 (preferably the Deluxe Edition)
 3. Drop all the contents of the Simcity 4 install into the main project directory
+   (they stay local — `.gitignore` keeps game files out of the repo)
 
 ## Roadmap
 
@@ -44,3 +45,7 @@ Godot clone of SimCity4
     - [ ] Play music
 - [ ] Multiplayer integration
 - [ ] Modding
+
+## License
+
+GNU Affero General Public License v3.0 or later — see `LICENSE`.

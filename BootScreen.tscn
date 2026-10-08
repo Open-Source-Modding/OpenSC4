@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://d0ediey6qa77f"]
 
 [ext_resource type="Script" uid="uid://bmfsjxbo5mwqc" path="res://BootScreen.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://swmrfycjhv5j" path="res://splash.png" id="2"]
 
 [node name="BootScreen" type="Control" unique_id=1731559740]
 layout_mode = 3
@@ -43,12 +42,6 @@ offset_left = 310.0
 offset_top = 631.0
 offset_right = 350.0
 offset_bottom = 645.0
-
-[node name="background" type="Sprite2D" parent="." unique_id=1054784431]
-z_index = -1
-position = Vector2(636, 366)
-scale = Vector2(0.6625, 0.675)
-texture = ExtResource("2")
 
 [node name="NextScene" type="Panel" parent="." unique_id=1007623945]
 visible = false

@@ -5,18 +5,24 @@
 OpenSC4 is an open-source **Godot 4.7 (GDScript)** reimplementation of *SimCity 4*. It does
 **not** ship game content — instead it loads the ORIGINAL game's proprietary assets
 (`.dat` / `.sc4` DBPF archives) at runtime and renders them. Licensed **GNU AGPL v3**
-(per the copyright headers in the source, e.g. top of `Core.gd`; there is no standalone
-`LICENSE` file).
+(the copyright headers in the source, e.g. top of `Core.gd`, say "version 3 or, at your
+option, any later version"; the full text is in `LICENSE`).
 
-## Requirements & setup
+## Assets: bring your own
+
+No SimCity 4 file is tracked — `.gitignore` blocks `*.dat`, `*.DAT`, `*.exe`, `*.dll`,
+`*.sgr`, `*.ini`, `*.png`, `*.import`, `readme.txt` and the sim data folders
+(`Regions/`, `EULA/`, `fontconfig/`, `Fonts/`, `Plugins/`,
+`Radio/Stations/{Mayor,Region}/`, `ReadMe/`, `Sku_Data/`, `Support/`). The boot splash and
+window-icon image are user-supplied as well (the repo bundles neither).
 
 - A real **SimCity 4 (Deluxe Edition)** install is required.
-- Per `README.md`, the user drops the entire contents of their SC4 install into the project
-  directory (large `.dat` game assets like `SimCity_1.dat` .. `SimCity_5.dat`, `EP1.dat`,
-  `Sound.dat`, `Intro.dat` are currently committed at the repo root — **do not touch them**).
+- Per `README.md`, the user drops the contents of their SC4 install into the project
+  directory — locally only, never committed.
 - The chosen game folder is held in `Core.game_dir` and cached in `user://config.ini` under
   `[paths] sc4_files`. On first boot (empty config) a `FileDialog` prompts for the folder
   (see `BootScreen.gd` `_ready()`).
+- Godot must be **4.7 or newer** (`project.godot` `config/features=PackedStringArray("4.7")`).
 
 ## Run / verify
 
@@ -120,5 +126,13 @@ Single loader `Thread` in `BootScreen` plus `call_deferred` marshaling. **No `Mu
 `Semaphore`, or `WorkerThreadPool` anywhere** — keep it that way unless genuinely necessary.
 
 ### Conventions
+
 **Indentation is 4 SPACES everywhere.** Keep the Godot editor's
-  `text_editor/behavior/indent/type` set to **spaces** (size 4).
+`text_editor/behavior/indent/type` set to **spaces** (size 4).
+
+## Notes
+
+The save-file format work done here was moved out to the docs site
+(`Open-Source-Modding/open-source-modding.github.io`):
+- [SimCity 4 savegame format analysis](https://github.com/Open-Source-Modding/open-source-modding.github.io/blob/main/docs/simcity/sc4-savegame-format-analysis.md)
+- [SimCity 4 known TGI ids](https://github.com/Open-Source-Modding/open-source-modding.github.io/blob/main/docs/simcity/sc4-known-tgi-ids.md)

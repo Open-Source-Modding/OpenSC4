@@ -7,7 +7,7 @@ extends DBPFSubfile
 #   0x49C05C8F  cSC4FoundationOccupant          82-byte records
 #   0x49C05C9F  cSC4LotRetainingWallOccupant   104-byte records
 #
-# dev_notes/save_file_analysis 4.4 lists these as network-family subfiles
+# sc4-savegame-format-analysis.md 4.4 lists these as network-family subfiles
 # ("unidentified ... subway/underground?" and "pipe subfile"). They are neither:
 # they are lot decoration, and the pipes are 0x49C05B9F.
 #

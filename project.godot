@@ -17,8 +17,6 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="OpenSC4"
 run/main_scene="res://BootScreen.tscn"
 config/features=PackedStringArray("4.7")
-boot_splash/image="res://splash.png"
-config/icon="res://splash.png"
 
 [autoload]
 
